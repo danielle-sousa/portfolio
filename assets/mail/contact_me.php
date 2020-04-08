@@ -8,12 +8,13 @@ if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || 
 $name = strip_tags(htmlspecialchars($_POST['name']));
 $email = strip_tags(htmlspecialchars($_POST['email']));
 $phone = strip_tags(htmlspecialchars($_POST['phone']));
+$whatsapp = strip_tags(htmlspecialchars($_POST['whatsapp']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
 
 // CONTEÚDO DO EMAIL
 $to = "daniellexsousa@gmail.com"; // EMAIL DE RECEBIMENTO AQUI
 $subject = "Formulário de Contato:  $name";
-$body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $phone\n\nMessage:\n$message";
+$body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $phone\n\nWhatsapp: $whatsapp\n\nMessage:\n$message";
 $header = "From: noreply@yourdomain.com\n"; // EMAIL DE ORIGEM
 $header .= "Reply-To: $email";	
 
